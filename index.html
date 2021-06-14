@@ -1,0 +1,113 @@
+<!DOCTYPE html5>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- class/id, name/src, for, type, href, value/title, alt-->
+  <h1>Newsletter Survey</h1>
+  <p>Thank you for your answers! We strive to improve. </p>
+
+  <div class="form-flex">
+    <form class="form-wrapper" action="index.html" method="post">
+      <!--BASIC INFO -->
+
+      <div class="form-question">
+        <label for="name">Your Name</label>
+        <br>
+        <input type="text" id="name" name="name" placeholder="Enter Name" required>
+      </div>
+
+
+      <div class="form-question">
+        <label for="email">Your Email</label>
+        <br>
+        <input type="email" id="email" name="email" placeholder="Enter Email" required>
+      </div>
+
+
+      <div class="form-question">
+        <label for="age">Age [optional]</label>
+        <br>
+        <input type="text" id="age" name="age" placeholder="Enter Age" maxlength="2" required>
+      </div>
+
+
+      <!--SUBSCRIBE LENGTH -->
+      <div class="form-question">
+        <label for="sub-length">How Long Have You Received Our Newsletter?</label>
+        <select id="sub-length" name="sub-length" required>
+          <option value="disabled" disabled> Select One</option>
+          <option value="new"> Less than 1 Month</option>
+          <option value="one-month"> 1 Month + </option>
+          <option value="six-months"> 6 Months + </option>
+          <option value="one-year"> 1 Year + </option>
+        </select>
+      </div>
+
+      <!--FAV PART OF EMAILS -->
+      <div class="form-question">
+        <label for="sub-length">What's Your Favorite Part of the Newsletters?</label>
+
+        <select id="fav-feature" name="fav-feature" required>
+          <option value="disabled" disabled>Select One</option>
+          <option value="round-up"> Weekly Round Up </option>
+          <option value="brainstorm"> Brainstorm </option>
+          <option value="resources"> Resources </option>
+          <option value="opportunities"> Opportunities </option>
+        </select>
+      </div>
+
+      <!--USAGE BUTTONS-->
+
+      <div class="form-question">
+        <label> Please Check All That Apply: <br>
+          <input type="checkbox" id="usage-choice1" name="usage-choice" value="use-brainstorm"> I use Brainstorm for new ideas
+        </label>
+        <br>
+        <label>
+          <input type="checkbox" id="usage-choice2" name="usage-choice" value="use-resources"> I use Resources for my projects
+        </label>
+        <br>
+        <label>
+          <input type="checkbox" id="usage-choice3" name="usage-choice" value="use-opps"> I use Opportunities for gig searching
+        </label>
+        <br>
+        <label>
+          <input type="checkbox" id="usage-choice4" name="usage-choice" value="no-usage"> I don't use any features, only Weekly Round Ups
+        </label>
+      </div>
+
+      <!--REFER SECTION-->
+      <div class="form-question">
+        <label> Would you refer our newsletter to a friend? <br>
+          <input type="radio" id="refer-choice1" name="refer-radio" value="yes" checked> Yes
+        </label>
+        <br>
+        <label>
+          <input type="radio" id="refer-choice2" name="refer-radio" value="no"> No </label>
+        <br>
+        <label>
+          <input type="radio" id="refer-choice3" name="refer-radio" value="maybe"> Maybe
+        </label>
+      </div>
+
+      <!--COMMENTS/SUGGESTIONS-->
+      <div class="form-question">
+        <label for="comments">Comments/Suggestions (optional)</label>
+
+        <textarea name="comments" rows="5" cols="60" placeholder="If you have anything else you'd like to see, or any other feedback, feel free to put it here!"></textarea>
+
+        <br>
+        <input type="submit" name="submit" class="submit-bttn" value="Submit">
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>
